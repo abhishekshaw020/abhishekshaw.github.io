@@ -124,15 +124,91 @@
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
+	      <!-- Header Section -->
+<div class="collapse navbar-collapse" id="ftco-nav">
+	<ul class="navbar-nav nav ml-auto stylish-nav">
+	  <li class="nav-item">
+		<a href="#home-section" class="nav-link"><span>Home</span></a>
+	  </li>
+	  <li class="nav-item">
+		<a href="#about-section" class="nav-link"><span>About</span></a>
+	  </li>
+	  <li class="nav-item">
+		<a href="#resume-section" class="nav-link"><span>Resume</span></a>
+	  </li>
+	  <li class="nav-item">
+		<a href="#project-section" class="nav-link"><span>Projects</span></a>
+	  </li>
+	  <li class="nav-item">
+		<a href="#blogs-section" class="nav-link"><span>Blogs</span></a>
+	  </li>
+	  <li class="nav-item">
+		<a href="#contact-section" class="nav-link"><span>Contact</span></a>
+	  </li>
+	</ul>
+  </div>
+  
+  <!-- CSS -->
+  <style>
+	/* Navbar general styling */
+	.navbar-nav {
+	  padding: 10px 20px;
+	  background-color: transparent; /* No background */
+	}
+  
+	/* Style each nav item */
+	.stylish-nav .nav-item {
+	  margin-left: 15px;
+	  transition: all 0.3s ease;
+	}
+  
+	/* Style the links inside the nav */
+	.stylish-nav .nav-link {
+	  color: #333; /* Darker text color */
+	  font-family: 'Poppins', sans-serif;
+	  font-weight: bold;
+	  font-size: 16px;
+	  letter-spacing: 1px;
+	  padding: 10px;
+	  transition: color 0.3s ease;
+	  position: relative;
+	}
+  
+	/* Add hover effects to the links */
+	.stylish-nav .nav-link:hover {
+	  color: #007bff; /* Blue accent on hover */
+	}
+  
+	/* Add underline effect on hover */
+	.stylish-nav .nav-link::after {
+	  content: '';
+	  display: block;
+	  width: 0;
+	  height: 2px;
+	  background-color: #007bff; /* Blue underline */
+	  transition: width 0.3s ease;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	}
+  
+	/* On hover, the underline grows */
+	.stylish-nav .nav-link:hover::after {
+	  width: 100%;
+	}
+  
+	/* Responsive spacing */
+	@media (max-width: 768px) {
+	  .stylish-nav .nav-item {
+		margin-left: 5px;
+	  }
+  
+	  .stylish-nav .nav-link {
+		font-size: 14px;
+	  }
+	}
+  </style>
+  
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
@@ -190,8 +266,8 @@
 			            <h2>Aspiring Analyst</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 1 years of learning experience</h2> -->
 						<!-- <br> -->
-			            <p><a  href="https://www.linkedin.com/in/abhishaw020/" class="btn btn-primary py-3 px-4" target="_blank">LinkedIn</a> 
-							<a  href="https://github.com/abhishekshaw020" class="btn btn-white btn-outline-white py-3 px-4" target="_blank">My works</a></p>
+			            <p><a href="https://www.linkedin.com/in/abhishaw020/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/abhishekshaw020" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -213,16 +289,16 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-me">
-										<img src="images/about-me.jpg" class="img-fluid rounded-circle b-shadow-a" alt="" style="width:200px; height:200px; object-fit:cover;">
+										<img src="images/about-me.jpg" class="img-fluid rounded b-shadow-a" alt="">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
-										<p><span class="title-s">Name : </span> <span> Abhishek Shaw</span></p>
-										<p><span class="title-s">Job Role : </span> <span> Analyst</span></p>
-										<p><span class="title-s">Experience : </span> <span> Just Started</span></p>
-										<p><span class="title-s">Address : </span> <span> Kolkata, India</span></p>
+										<p><span class="title-s">Name: </span> <span>Abhishek Shaw</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>Just Started</span></p>
+										<p><span class="title-s">Address: </span> <span>Kolkata, India</span></p>
 									  </div>
 									</div>
 								  </div>
@@ -274,12 +350,12 @@
 									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
 									Demonstrated success in leading impactful projects and with an effective mentorship.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span> Data Analyst</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
 									<li class="d-flex"><span>Domain:</span> <span>Business Analytics &amp; Data Science </span></li>
 									<li class="d-flex"><span>Education:</span> <span>Masters in Business Analytics & Data Science</span></li>
-									<li class="d-flex"><span>Language:</span> <span>Hindi,English,Bengali</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi,Bengali</span></li>
 									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span> Excel, Git, GitHub, Streamlit, RPA &amp; Data Mining</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span> Excel, Git, GitHub, Streamlit &amp; Data Mining</span></li>
 									<li class="d-flex"><span>Interest:</span> <span>Content creation, Learning</span></li>
 									
 								</ul>
@@ -293,7 +369,7 @@
 									<span class="number" data-number="30">0</span> <span>+</span>
 									<span>&nbsp; Projects completed</span>
 								</p>
-								<p><a href="https://www.linkedin.com/in/abhishaw020/ " class="btn btn-primary py-3 px-3" target="_blank">LinkedIn</a></p>
+								<p><a href="https://www.linkedin.com/in/abhishaw020/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
 							</div>
 						</div>
 					</div>
@@ -324,6 +400,20 @@
 		<div class="row">
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
+						<span class="date">4th March 2024 to 3rd May 2024</span>
+						<h2>Business Analyst Intern</h2>
+						<span class="position">VIStevia</span>
+						<p class="mt-4">During my project at Vistevia, I analyzed data from Amazon Seller Central and Flipkart Advertisement Hub to provide strategic insights. Using a combination of machine learning, exploratory data analysis (EDA), and business acumen, I identified key patterns in customer preferences and peak sales periods. My analysis led to recommendations that optimized marketing spend, improved customer targeting, and maximized sales during high-traffic times. This experience allowed me to work with large datasets and deliver actionable, data-driven strategies that aligned with business goals. 
+							<ul>
+								<li>Tools : Python (EDA, Machine Learning)</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
 						<span class="date">2024-May</span>
 						<h2>Networking and Collaboration</h2>
 						<span class="position">NASSCOM</span>
@@ -332,21 +422,6 @@
 								<li>This event was organised by BIBS in collaboration with NASSCOM.</li>
 								<li>I was responsible for handling the corporates database and also communicationg with them.</li>
 								<li>Had to explain about our domain to them , explaining projects to them , and got the oppurtunity to showcase my projects to CEO,CTO of multiple organisations and they appreciated me for my works.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-			<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2023-July</span>
-						<h2>Networking Specilaist</h2>
-						<span class="position">DSCI</span>
-						<p class="mt-4">BIBS, one of the top B-Schools in Kolkata prepares the entire you — with rigorous faith-integrated academics. The only MBA Institute in Kolkata, that provides assistance in every program,every step of the way, and we train your mind and spirit to be ready for a life of impact. 
-							<ul>
-								<li>This event was organised by BIBS in collaboration with DSCI(DATA SECURITY COUNCIL OF INDIA).</li>
-								<li>I was responsible for handling the corporates and networking with them.</li>
-								<li>Got the oppurtunity to meet the CEO of DSCI Mr. Vinayak Godse.</li>
 							</ul>
 						</p>
 					</div>
@@ -385,7 +460,7 @@
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/drive/folders/1hsQco9HDW4LH61buL4ObAK2c3LXeFMQp?usp=sharing " class="btn btn-primary py-4 px-5" target="_blank" >Download CV</a></p>
+    				<p><a href="https://drive.google.com/drive/folders/1hsQco9HDW4LH61buL4ObAK2c3LXeFMQp?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -399,7 +474,7 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are my projects on MYSQL, Python, Power BI and Machine Learning .</p>
+            <p>Below are my sample projects on MYSQL, Python, Power BI and Machine Learning .</p>
           </div>
         </div>
         <div class="row d-flex">
@@ -442,11 +517,11 @@
 		<div class="row d-flex justify-content-center">  
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/abhishekshaw020/Data_science_salary_prediction  " class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				<a href="https://github.com/abhishekshaw020/Data_science_salary_prediction" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="https://github.com/abhishekshaw020/Data_science_salary_prediction ">Data Science Salary Prediction using ML.</a></h3>
+				  <h3 class="heading"><a href="https://github.com/abhishekshaw020/Data_science_salary_prediction">Data Science Salary Prediction using ML.</a></h3>
 				  <p>Used multiple machine learning models to forecast salary based on experiences and converted into web app using Streamlit.</p>
 				</div>
 			  </div>
@@ -457,7 +532,7 @@
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="https://github.com/abhishekshaw020/Nike-Analysis ">Nike Product Dashboard using Power BI.</a></h3>
+				  <h3 class="heading"><a href="https://github.com/abhishekshaw020/Nike-Analysis">Nike Product Dashboard using Power BI.</a></h3>
 				  <p>Developed a power bi dashboard just to showcase different Nike products &amp; used new slicers and cards present inside it.</p>
 				</div>
 			  </div>
@@ -496,7 +571,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="74">0</strong>
+                <strong class="number" data-number="68">0</strong>
                 <span>Certifications</span>
               </div>
             </div>
@@ -511,59 +586,29 @@
 						<h2>More projects on<span> Github  </span> </h2>
 						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
 						<br>
-						<p><a href="https://github.com/abhishekshaw020 " class="btn btn-primary py-3 px-5" target="_blank">GitHub</a></p>
+						<p><a href="https://github.com/abhishekshaw020" class="btn btn-primary py-3 px-5">GitHub</a></p>
 						</div>
 					</div>
 				</div>
 			<!-- </div> -->
 		</div>
 	</section>
-	 <!-- Power BI Dashboard Section -->
-	 <section class="ftco-section" id="dashboard-section">
-		<div class="container">
-		  <div class="row justify-content-center mb-5 pb-3">
-			<div class="col-md-7 heading-section text-center">
-			  <h2 class="mb-4">Power BI Interactive Dashboard</h2>
-			  <p>Interactive visualization of Nike Products.</p>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-md-12">
-			  <iframe width="100%" height="600" src="https://app.powerbi.com/reportEmbed?reportId=554abf2b-e298-4664-a27e-f6e8e4ffe3ff&autoAuth=true&ctid=0c1cdcb1-e5e8-4c65-a219-0735a5ed5162" frameborder="0" allowFullScreen="true"></iframe>
-			</div>
-		  </div>
+	 
+<!-- Blogs Section -->
+<section class="ftco-section" id="blogs-section">
+	<div class="container">
+	  <div class="row justify-content-center mb-5 pb-3">
+		<div class="col-md-7 heading-section text-center">
+		  <h2 class="mb-4">Blogs</h2>
+		  <p>Check out my latest posts here!!!</p>
+		  <!-- Button to redirect to Medium blog -->
+		  <a href="https://medium.com/@abhishaw020" target="_blank" class="btn btn-primary">Go to Blogs</a>
 		</div>
-	  </section>
-	  <section class="ftco-section" id="dashboard-section">
-		<div class="container">
-		  <div class="row justify-content-center mb-5 pb-3">
-			<div class="col-md-7 heading-section text-center">
-			  <h2 class="mb-4">Power BI  Cartoon Dashboard</h2>
-			  <p>Interactive Animated Cartoon dashboard.</p>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-md-12">
-			  <iframe width="100%" height="600" src="https://app.powerbi.com/reportEmbed?reportId=8ba2ca24-372b-47aa-85b9-124d0ca83efb&autoAuth=true&ctid=0c1cdcb1-e5e8-4c65-a219-0735a5ed5162" frameborder="0" allowFullScreen="true"></iframe>
-			</div>
-		  </div>
-		</div>
-	  </section>
-	  <section class="ftco-section" id="dashboard-section">
-		<div class="container">
-		  <div class="row justify-content-center mb-5 pb-3">
-			<div class="col-md-7 heading-section text-center">
-			  <h2 class="mb-4">Adidas Sales Dashboard</h2>
-			  <p>Interactive Animated Sales dashboard.</p>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-md-12">
-			  <iframe width="100%" height="600" src="https://app.powerbi.com/reportEmbed?reportId=158dd857-a27d-4ee9-aa40-0a336f8a1c48&autoAuth=true&ctid=0c1cdcb1-e5e8-4c65-a219-0735a5ed5162" frameborder="0" allowFullScreen="true"></iframe>
-			</div>
-		  </div>
-		</div>
-	  </section>
+	  </div>
+	</div>
+  </section>
+  
+  
 
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
@@ -610,7 +655,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/drive/folders/1hsQco9HDW4LH61buL4ObAK2c3LXeFMQp?usp=sharing" target="_blank" >Click Here</a></p>
+	            <p><a href="https://drive.google.com/drive/folders/1hsQco9HDW4LH61buL4ObAK2c3LXeFMQp?usp=sharing">Click Here</a></p>
 	          </div>
           </div>
 
@@ -619,7 +664,7 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/BNhpjhm2UCn9HpxXA" class="btn btn-primary py-3 px-5" target="_blank">Click Here</a> </h2>
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/BNhpjhm2UCn9HpxXA" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
 				</div>
 			</div>
 				<br>
@@ -645,7 +690,7 @@
 			<div class="col-md-12 text-center">
   
 			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | With Love <i class="icon-heart color-danger" aria-hidden="true"></i> from <a href="#" target="_blank">Abhishek</a>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 			</div>
 		  </div>
